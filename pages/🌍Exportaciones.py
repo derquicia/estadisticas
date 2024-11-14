@@ -77,6 +77,9 @@ st_echarts(
     options=option, height="400px" ,
 )
 
+
+st.write('otro')
+
 with open("./data/life-expectancy-table.json") as f:
         raw_data = json.load(f)
     countries = [
