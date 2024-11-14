@@ -100,7 +100,7 @@ st.write(raw_data)
 
 with open("./data/life-expectancy-table.json") as f:
         raw_data1 = json.load(f)
-st.write(dataset_{country})  
+
 
 countries = [
         "Finland",
@@ -130,7 +130,7 @@ datasetWithFilters = [
         }
         for country in countries
 ]
-
+st.write(datasetWithFilters)  
 seriesList = [
         {
             "type": "line",
