@@ -103,15 +103,14 @@ with open("./data/life-expectancy-table.json") as f:
 st.write(f)  
 
 countries = [
-        "DINAMARCA",
-        "ESTADOS UNIDOS",
-        "FRANCIA",
-        "IRLANDA",
-        "JAPON",
-        "MEXICO",
-        "NORUEGA",
-        "REINO UNIDO",
-        "PAISES BAJOS",
+        "Finland",
+        "France",
+        "Germany",
+        "Iceland",
+        "Norway",
+        "Poland",
+        "Russia",
+        "United Kingdom",
 ]
 #"id": f"dataset_{country}",
 
