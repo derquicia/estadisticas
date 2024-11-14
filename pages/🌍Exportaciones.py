@@ -87,6 +87,7 @@ dfp = conn.query('select value as Income, 0 as LifeExpectancy, 0 as Population,p
 tt = '[["Income","LifeExpectancy","Population","country","year"],['
 st.write(tt)
 f = dfp.to_json(orient="values")
+raw_data = f
 
 #with open("./data/life-expectancy-table.json") as f:
 #        raw_data = json.load(f)
