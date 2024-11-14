@@ -41,10 +41,6 @@ hide_streamlit_style = """
                 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-st.header('Basketball')
-st.sidebar.page_link('streamlit_app.py', label='Home')
-
-
 
 
 
