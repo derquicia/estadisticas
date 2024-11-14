@@ -123,7 +123,7 @@ datasetWithFilters = [
                 "type": "filter",
                 "config": {
                     "and": [
-                        {"dimension": "Year", "gte": 1950},
+                        {"dimension": "Year", "gte": 2002},
                         {"dimension": "Country", "=": country},
                     ]
                 },
