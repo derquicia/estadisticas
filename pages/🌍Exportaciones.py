@@ -116,7 +116,7 @@ countries = [
 
 datasetWithFilters = [
         {
-            "id": f"dataset_{country}",
+            "id": json_str"dataset_{country}",
             "fromDatasetId": "dataset_raw",
             "transform": {
                 "type": "filter",
