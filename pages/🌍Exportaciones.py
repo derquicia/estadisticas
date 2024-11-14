@@ -82,7 +82,7 @@ st.write('otro')
 
 with open("./data/life-expectancy-table.json") as f:
         raw_data = json.load(f)
-    countries = [
+countries = [
         "Finland",
         "France",
         "Germany",
@@ -91,7 +91,7 @@ with open("./data/life-expectancy-table.json") as f:
         "Poland",
         "Russia",
         "United Kingdom",
-    ]
+]
 
   datasetWithFilters = [
         {
