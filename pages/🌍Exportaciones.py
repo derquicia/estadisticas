@@ -89,11 +89,11 @@ st.write(tt)
 f = dfp.to_json(orient="values")
 f = f.replace("[[" ,tt)
 #raw_data = json.load(dfp.to_json(orient="values"))
-st.write(f)  
+#st.write(f)  
 
 json_str = dfp.to_json(orient='records')
 json_obj = json.loads(f)
-#st.write(json_obj)  
+st.write(json_obj)  
 raw_data = json_obj
 
 #with open("./data/life-expectancy-table.json") as f:
