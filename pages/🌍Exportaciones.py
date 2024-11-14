@@ -93,7 +93,7 @@ countries = [
         "United Kingdom",
 ]
 
-  datasetWithFilters = [
+datasetWithFilters = [
         {
             "id": f"dataset_{country}",
             "fromDatasetId": "dataset_raw",
@@ -108,9 +108,9 @@ countries = [
             },
         }
         for country in countries
-  ]
+]
 
-  seriesList = [
+seriesList = [
         {
             "type": "line",
             "datasetId": f"dataset_{country}",
@@ -133,9 +133,9 @@ countries = [
             },
         }
         for country in countries
-  ]
+]
 
-  option = {
+option = {
         "animationDuration": 10000,
         "dataset": [{"id": "dataset_raw", "source": raw_data}] + datasetWithFilters,
         "title": {"text": "Income in Europe since 1950"},
@@ -144,7 +144,7 @@ countries = [
         "yAxis": {"name": "Income"},
         "grid": {"right": 140},
         "series": seriesList,
-  }
+}
 st_echarts(options=option, height="600px")
 
 
