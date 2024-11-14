@@ -133,7 +133,7 @@ st.write(datasetWithFilters)
 seriesList = [
         {
             "type": "line",
-            "datasetId":dfpe['country'].to_list(),
+            "datasetId":f"dataset_{country}",
             "showSymbol": False,
             "name": country,
             "endLabel": {
