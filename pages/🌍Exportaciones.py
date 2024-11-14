@@ -171,7 +171,7 @@ f = dfp.to_json(orient="values")
 f = f.replace("[[" ,tt)
 #st.write(f)
 raw_data = f
-#st.write(json_list)
+#st.write(f)
 countries = [
         "DINAMARCA",
         "ESTADOS UNIDOS",
