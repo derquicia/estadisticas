@@ -97,7 +97,7 @@ countries = [
 
 datasetWithFilters = [
         {
-            "id": json_list"dataset_{pais}",
+            "id": dfp"dataset_{pais}",
             "fromDatasetId": "dataset_raw",
             "transform": {
                 "type": "filter",
@@ -114,7 +114,7 @@ datasetWithFilters = [
 seriesList = [
         {
             "type": "line",
-            "datasetId":json_list"dataset_{pais}",
+            "datasetId":dfp"dataset_{pais}",
             "showSymbol": False,
             "name": pais,
             "endLabel": {
