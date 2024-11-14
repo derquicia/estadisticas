@@ -84,7 +84,7 @@ st_echarts(
         .add_yaxis("fob", df[fob])
         .set_global_opts(title_opts=opts.TitleOpts(title="titulo"))
     )
-    st_pyecharts(c)
+st_pyecharts(c)
 
 
 df1 = conn.query('select periodo,litros,fob from info_expo_anio_mes ;', ttl="0")
