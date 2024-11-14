@@ -80,8 +80,16 @@ st_echarts(
 
 st.write('otro')
 
-with open("./data/life-expectancy-table.json") as f:
-        raw_data = json.load(f)
+conn = st.connection("postgresql", type="sql")
+dfp = conn.query('select value as Income anio ' ' as LifeExpectancy,' ' as Population,pais as country,anio as year from info_expo_anio_paises ;', ttl="0")
+#st.write(dfp['pais'])
+#json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
+tt = '[["Income","LifeExpectancy","Population","country","year"],['
+st.write(tt)
+f = dfp.to_json(orient="values")
+
+#with open("./data/life-expectancy-table.json") as f:
+#        raw_data = json.load(f)
 countries = [
         "Finland",
         "France",
