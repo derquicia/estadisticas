@@ -77,7 +77,6 @@ st_echarts(
     options=option, height="400px" ,
 )
 
-
 conn = st.connection("postgresql", type="sql")
 dfp = conn.query('select anio,pais, value,fob from inf_expo_anio_paises ;', ttl="0")
 #st.write(df)
