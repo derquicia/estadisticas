@@ -86,7 +86,7 @@ st.write(tt)
 f = dfp.to_json(orient="values")
 
 f = f.replace("[[" ,tt)
-st.write(f)
+#st.write(f)
 raw_data = f
 #st.write(json_list)
 countries = [
@@ -149,10 +149,10 @@ option = {
         "tooltip": {"order": "valueDesc", "trigger": "axis"},
         "xAxis": {"type": "category", "nameLocation": "middle"},
         "yAxis": {"name": "value"},
-        "grid": {"right": 140},
+        "grid": {"right": 40},
         "series": seriesList,
 }
-st_echarts(options=option, height="600px")
+st_echarts(options=option, height="500px")
 
 
 
