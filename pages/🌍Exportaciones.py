@@ -77,14 +77,53 @@ st_echarts(
     options=option, height="400px" ,
 )
 
-c = (
-       Line()
-       .add_xaxis(df['anio'])
-       .add_yaxis("Litros", df['litros'])
-       .add_yaxis("fob", df['fob'])
-       .set_global_opts(title_opts=opts.TitleOpts(title="titulo"))
-  )
-st_pyecharts(c)
+conn = st.connection("postgresql", type="sql")
+dfp = conn.query('select anio,pais, value,fob from inf_expo_anio_paises ;', ttl="0")
+#st.write(df)
+json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
+raw_data = json.load(json_list)
+
+countries = [
+        "DINAMARCA",
+        "ESTADOS UNIDOS",
+        "FRANCIA",
+        "IRLANDA",
+        "JAPON",
+        "MEXICO",
+        "NORUEGA",
+        "REINO UNIDO"
+        "PAISES BAJOS",
+]
+
+datasetWithFilters = [
+        {
+            "id": f"dataset_{pais}",
+            "fromDatasetId": "dataset_raw",
+            "transform": {
+                "type": "filter",
+                "config": {
+                    "and": [
+                        {"dimension": "anio", "gte": 1950},
+                        {"dimension": "Pais", "=": pais},
+                    ]
+                },
+            },
+        }
+        for pais in countries
+]
+
+option = {
+        "animationDuration": 10000,
+        "dataset": [{"id": "dataset_raw", "source": raw_data}] + datasetWithFilters,
+        "title": {"text": "Income in Europe since 1950"},
+        "tooltip": {"order": "valueDesc", "trigger": "axis"},
+        "xAxis": {"type": "category", "nameLocation": "middle"},
+        "yAxis": {"name": "pais"},
+        "grid": {"right": 140},
+        "series": seriesList,
+}
+st_echarts(options=option, height="600px")
+
 
 
 df1 = conn.query('select periodo,litros,fob from info_expo_anio_mes ;', ttl="0")
