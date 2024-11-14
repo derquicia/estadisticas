@@ -111,6 +111,30 @@ datasetWithFilters = [
         }
         for pais in countries
 ]
+seriesList = [
+        {
+            "type": "line",
+            "datasetId": f"dataset_{pais}",
+            "showSymbol": False,
+            "name": pais,
+            "endLabel": {
+                "show": True,
+                "formatter": JsCode(
+                    "function (params) { return params.value[3] + ': ' + params.value[0];}"
+                ).js_code,
+            },
+            "labelLayout": {"moveOverlap": "shiftY"},
+            "emphasis": {"focus": "series"},
+            "encode": {
+                "x": "anio",
+                "y": "Income",
+                "label": ["Country", "pais"],
+                "itemName": "anio",
+                "tooltip": ["pais"],
+            },
+        }
+        for pais in countries
+]
 
 option = {
         "animationDuration": 10000,
