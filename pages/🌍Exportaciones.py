@@ -120,7 +120,7 @@ seriesList = [
             "endLabel": {
                 "show": True,
                 "formatter": JsCode(
-                    "function (params) { return params.value[2] + ': ' + params.value[0];}"
+                    "function (params) { return params.value[0] + ': ' + params.value[2];}"
                 ).js_code,
             },
             "labelLayout": {"moveOverlap": "shiftY"},
@@ -128,7 +128,7 @@ seriesList = [
             "encode": {
                 "x": "anio",
                 "y": "value",
-                "label": ["Country", "pais"],
+                "label": ["pais", "value"],
                 "itemName": "anio",
                 "tooltip": ["value"],
             },
