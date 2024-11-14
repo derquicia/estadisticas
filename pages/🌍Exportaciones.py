@@ -81,7 +81,7 @@ st_echarts(
 st.write('otro')
 
 conn = st.connection("postgresql", type="sql")
-dfp = conn.query('select value as Income anio ' ' as LifeExpectancy,' ' as Population,pais as country,anio as year from info_expo_anio_paises ;', ttl="0")
+dfp = conn.query('select value as Income, ' ' as LifeExpectancy,' ' as Population,pais as country,anio as year from info_expo_anio_paises ;', ttl="0")
 #st.write(dfp['pais'])
 #json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
 tt = '[["Income","LifeExpectancy","Population","country","year"],['
