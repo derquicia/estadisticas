@@ -93,6 +93,7 @@ f = dfp.to_json(orient="values")
 json_str = dfp.to_json(orient='records')
 json_obj = json.loads(json_str)
 st.write(json_obj)  
+raw_data = json_obj
 
 #with open("./data/life-expectancy-table.json") as f:
 #        raw_data = json.load(f)
