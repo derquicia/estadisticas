@@ -138,7 +138,7 @@ seriesList = [
 
 option = {
         "animationDuration": 10000,
-        "dataset": [{"id": "dataset_raw", "source": json_list}] + datasetWithFilters,
+        "dataset": [{"id": "dataset_raw", "source": raw_data}] + datasetWithFilters,
         "title": {"text": "Income in Europe since 1950"},
         "tooltip": {"order": "valueDesc", "trigger": "axis"},
         "xAxis": {"type": "category", "nameLocation": "middle"},
