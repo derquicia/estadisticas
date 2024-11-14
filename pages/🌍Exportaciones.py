@@ -162,88 +162,10 @@ option = {
         "tooltip": {"order": "valueDesc", "trigger": "axis"},
         "xAxis": {"type": "category", "nameLocation": "middle"},
         "yAxis": {"name": "Income"},
-        "grid": {"right": 140},
+        "grid": {"right": 100},
         "series": seriesList,
 }
 st_echarts(options=option, height="600px")
-
-
-conn = st.connection("postgresql", type="sql")
-dfp = conn.query('select anio,pais, value,fob from info_expo_anio_paises ;', ttl="0")
-#st.write(dfp['pais'])
-#json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
-tt = '[["anio","pais","value","fob"],['
-#st.write(tt)
-f = dfp.to_json(orient="values")
-
-f = f.replace("[[" ,tt)
-#st.write(f)
-raw_data = f
-#st.write(f)
-countries = [
-        "DINAMARCA",
-        "ESTADOS UNIDOS",
-        "FRANCIA",
-        "IRLANDA",
-        "JAPON",
-        "MEXICO",
-        "NORUEGA",
-        "REINO UNIDO"
-        "PAISES BAJOS",
-]
-
-datasetWithFilters = [
-        {
-            "id":  f"dataset_{pais}",
-            "fromDatasetId": "dataset_raw",
-            "transform": {
-                "type": "filter",
-                "config": {
-                    "and": [
-                        {"dimension": "anio", "gte": 2000},
-                        {"dimension": "Pais", "=": pais},
-                    ]
-                },
-            },
-        }
-        for pais in countries
-]
-seriesList = [
-        {
-            "type": "line",
-            "datasetId": f"dataset_{pais}",
-            "showSymbol": False,
-            "name": pais,
-            "endLabel": {
-                "show": True,
-                "formatter": JsCode(
-                    "function (params) { return params.value[1] + ': ' + params.value[2];}"
-                ).js_code,
-            },
-            "labelLayout": {"moveOverlap": "shiftY"},
-            "emphasis": {"focus": "series"},
-            "encode": {
-                "x": "anio",
-                "y": "value",
-                "label": ["pais", "value"],
-                "itemName": "anio",
-                "tooltip": ["value"],
-            },
-        }
-        for pais in countries
-]
-
-option = {
-        "animationDuration": 10000,
-        "dataset": [{"id": "dataset_raw", "source": raw_data}] + datasetWithFilters,
-        "title": {"text": "Income in Europe since 1950"},
-        "tooltip": {"order": "valueDesc", "trigger": "axis"},
-        "xAxis": {"type": "category", "nameLocation": "middle"},
-        "yAxis": {"name": "value"},
-        "grid": {"right": 40},
-        "series": seriesList,
-}
-st_echarts(options=option, height="500px")
 
 
 
