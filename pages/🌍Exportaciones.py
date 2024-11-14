@@ -78,7 +78,7 @@ st_echarts(
 )
 
 conn = st.connection("postgresql", type="sql")
-dfp = conn.query('select anio,pais, value,fob from inf_expo_anio_paises ;', ttl="0")
+dfp = conn.query('select anio,pais, value,fob from info_expo_anio_paises ;', ttl="0")
 #st.write(df)
 json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
 raw_data = json.load(json_list)
