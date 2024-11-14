@@ -98,7 +98,7 @@ raw_data = json_obj
 
 with open("./data/life-expectancy-table.json") as f:
         raw_data1 = json.load(f)
-#st.write(raw_data)  
+st.write(raw_data1)  
 
 countries = [
         "Finland",
