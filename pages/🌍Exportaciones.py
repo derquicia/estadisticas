@@ -88,6 +88,7 @@ tt = '[["Income","LifeExpectancy","Population","country","year"],['
 st.write(tt)
 f = dfp.to_json(orient="values")
 raw_data = f
+st.write(raw_data)  
 
 with open("./data/life-expectancy-table.json") as f:
         raw_data = json.load(f)
