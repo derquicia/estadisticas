@@ -82,7 +82,7 @@ dfp = conn.query('select anio,pais, value,fob from info_expo_anio_paises ;', ttl
 #st.write(dfp['pais'])
 #json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
 f = dfp.to_json(orient="values")
-#st.write(f)
+st.write(f)
 raw_data = f
 #st.write(json_list)
 countries = [
