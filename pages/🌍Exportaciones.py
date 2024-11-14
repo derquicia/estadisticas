@@ -99,7 +99,7 @@ st.write(raw_data)
 
 with open("./data/life-expectancy-table.json") as f:
         raw_data1 = json.load(f)
-st.write(raw_data1)  
+st.write(f)  
 
 countries = [
         "DINAMARCA",
@@ -116,7 +116,7 @@ countries = [
 
 datasetWithFilters = [
         {
-            "id": dfp['country'],
+            "id": f"dataset_{country}",
             "fromDatasetId": "dataset_raw",
             "transform": {
                 "type": "filter",
@@ -134,7 +134,7 @@ datasetWithFilters = [
 seriesList = [
         {
             "type": "line",
-            "datasetId": dfp['country'],
+            "datasetId": f"dataset_{country}",
             "showSymbol": False,
             "name": country,
             "endLabel": {
