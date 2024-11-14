@@ -112,11 +112,11 @@ countries = [
         "REINO UNIDO"
         "PAISES BAJOS",
 ]
+#"id": f"dataset_{country}",
 
 datasetWithFilters = [
         {
             "id": dfp['country'],
-            #"id": f"dataset_{country}",
             "fromDatasetId": "dataset_raw",
             "transform": {
                 "type": "filter",
