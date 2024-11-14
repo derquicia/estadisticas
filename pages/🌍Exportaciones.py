@@ -96,7 +96,7 @@ json_str = dfp.to_json(orient='records')
 json_obj = json.loads(f)
 #st.write(json_obj)  
 raw_data = json_obj
-st.write(raw_data)  
+
 
 with open("./data/life-expectancy-table.json") as f:
         raw_data1 = json.load(f)
@@ -129,7 +129,7 @@ datasetWithFilters = [
         }
         for country in countries
 ]
-st.write(datasetWithFilters)  
+
 seriesList = [
         {
             "type": "line",
