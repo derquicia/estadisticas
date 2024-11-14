@@ -116,7 +116,7 @@ countries = [
 
 datasetWithFilters = [
         {
-            "id": dfp['country'],
+            "id": dfp['country'].to_list(),
             "fromDatasetId": "dataset_raw",
             "transform": {
                 "type": "filter",
