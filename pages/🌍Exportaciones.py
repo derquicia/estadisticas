@@ -80,8 +80,8 @@ st_echarts(
 c = (
        Line()
        .add_xaxis(df['anio'])
-       .add_yaxis("Litros", df['litros])
-       .add_yaxis("fob", df[fob])
+       .add_yaxis("Litros", df['litro's])
+       .add_yaxis("fob", df['fob'])
        .set_global_opts(title_opts=opts.TitleOpts(title="titulo"))
   )
 st_pyecharts(c)
