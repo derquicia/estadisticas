@@ -81,7 +81,7 @@ conn = st.connection("postgresql", type="sql")
 dfp = conn.query('select anio,pais, value,fob from info_expo_anio_paises ;', ttl="0")
 #st.write(dfp['pais'])
 #json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
-tt = "[[""anio"",""pais"",""value"",""fob""],["
+tt = "[["""anio""","""pais""","""value""","""fob"""],["
 st.write(tt)
 f = dfp.to_json(orient="values")
 
