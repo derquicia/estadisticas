@@ -85,7 +85,7 @@ tt = '[["anio","pais","value","fob"],['
 st.write(tt)
 f = dfp.to_json(orient="values")
 
-#f = f.replace("[[" ,"[["anio","pais","value","fob"],[")
+f = f.replace("[[" ,tt)
 st.write(f)
 raw_data = f
 #st.write(json_list)
