@@ -120,17 +120,17 @@ seriesList = [
             "endLabel": {
                 "show": True,
                 "formatter": JsCode(
-                    "function (params) { return params.value[3] + ': ' + params.value[0];}"
+                    "function (params) { return params.value[2] + ': ' + params.value[0];}"
                 ).js_code,
             },
             "labelLayout": {"moveOverlap": "shiftY"},
             "emphasis": {"focus": "series"},
             "encode": {
                 "x": "anio",
-                "y": "Income",
+                "y": "value",
                 "label": ["Country", "pais"],
                 "itemName": "anio",
-                "tooltip": ["pais"],
+                "tooltip": ["value"],
             },
         }
         for pais in countries
@@ -142,7 +142,7 @@ option = {
         "title": {"text": "Income in Europe since 1950"},
         "tooltip": {"order": "valueDesc", "trigger": "axis"},
         "xAxis": {"type": "category", "nameLocation": "middle"},
-        "yAxis": {"name": "pais"},
+        "yAxis": {"name": "value"},
         "grid": {"right": 140},
         "series": seriesList,
 }
