@@ -84,7 +84,7 @@ conn = st.connection("postgresql", type="sql")
 dfp = conn.query('select value as Income, 0 as LifeExpectancy, 0 as Population,pais as country,anio as year from info_expo_anio_paises ;', ttl="0")
 #st.write(dfp['pais'])
 json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
-tt = '[["Income","LifeExpectancy","Population","country","year"],['
+tt = '[["Income","Life Expectancy","Population","country","year"],['
 st.write(tt)
 f = dfp.to_json(orient="values")
 f = f.replace("[[" ,tt)
@@ -156,7 +156,7 @@ seriesList = [
 
 option = {
         "animationDuration": 100000,
-        "dataset": [{"id": "dataset_raw", "source": raw_data1}] + datasetWithFilters,
+        "dataset": [{"id": "dataset_raw", "source": raw_data}] + datasetWithFilters,
         "title": {"text": "Income in Europe since 1950"},
         "tooltip": {"order": "valueDesc", "trigger": "axis"},
         "xAxis": {"type": "category", "nameLocation": "middle"},
