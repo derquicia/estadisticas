@@ -7,6 +7,8 @@ from streamlit_echarts import JsCode
 from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar
 from pyecharts import options as opts
+from pyecharts.charts import Line
+
 
 hide_streamlit_style = """
                 <style>
@@ -74,6 +76,15 @@ option = {
 st_echarts(
     options=option, height="400px" ,
 )
+
+ c = (
+        Line()
+        .add_xaxis(df['anio])
+        .add_yaxis("Litros", df['litros])
+        .add_yaxis("fob", df[fob])
+        .set_global_opts(title_opts=opts.TitleOpts(title="titulo"))
+    )
+    st_pyecharts(c)
 
 
 df1 = conn.query('select periodo,litros,fob from info_expo_anio_mes ;', ttl="0")
