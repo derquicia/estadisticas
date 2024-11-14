@@ -135,7 +135,7 @@ datasetWithFilters = [
 seriesList = [
         {
             "type": "line",
-            "datasetId": f"dataset_{country}",
+            "datasetId":dfpe['country'].to_list(),
             "showSymbol": False,
             "name": country,
             "endLabel": {
