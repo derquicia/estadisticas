@@ -96,8 +96,8 @@ json_obj = json.loads(f)
 st.write(json_obj)  
 raw_data = json_obj
 
-#with open("./data/life-expectancy-table.json") as f:
-#        raw_data = json.load(f)
+with open("./data/life-expectancy-table.json") as f:
+        raw_data1 = json.load(f)
 #st.write(raw_data)  
 
 countries = [
