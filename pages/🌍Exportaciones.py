@@ -110,7 +110,7 @@ countries = [
         "JAPON",
         "MEXICO",
         "NORUEGA",
-        "REINO UNIDO"
+        "REINO UNIDO",
         "PAISES BAJOS",
 ]
 #"id": f"dataset_{country}",
@@ -175,7 +175,7 @@ dfp = conn.query('select anio,pais, value,fob from info_expo_anio_paises ;', ttl
 #st.write(dfp['pais'])
 #json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
 tt = '[["anio","pais","value","fob"],['
-st.write(tt)
+#st.write(tt)
 f = dfp.to_json(orient="values")
 
 f = f.replace("[[" ,tt)
