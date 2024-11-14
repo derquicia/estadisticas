@@ -79,10 +79,10 @@ st_echarts(
 
 conn = st.connection("postgresql", type="sql")
 dfp = conn.query('select anio,pais, value,fob from info_expo_anio_paises ;', ttl="0")
-st.write(dfp['pais'])
+#st.write(dfp['pais'])
 json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
 raw_data = json_list
-st.write(json_list)
+#st.write(json_list)
 countries = [
         "DINAMARCA",
         "ESTADOS UNIDOS",
@@ -97,7 +97,7 @@ countries = [
 
 datasetWithFilters = [
         {
-            "id": dfp"dataset_{pais}",
+            "id": dfp{pais}",
             "fromDatasetId": "dataset_raw",
             "transform": {
                 "type": "filter",
