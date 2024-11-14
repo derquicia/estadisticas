@@ -84,7 +84,7 @@ dfp = conn.query('select anio,pais, value,fob from info_expo_anio_paises ;', ttl
 
 f = dfp.to_json(orient="values")
 
-f = f.replace("[[" ,"[['anio','pais','value','fob'],[")
+f = f.replace("[[" ,"[["anio","pais","value","fob"],[")
 st.write(f)
 raw_data = f
 #st.write(json_list)
