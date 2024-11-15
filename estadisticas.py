@@ -17,7 +17,7 @@ st.set_page_config(
 
 #alt.themes.enable("dark")
 
-
+st.title("Indicadores")
 
 
 hide_streamlit_style = """
