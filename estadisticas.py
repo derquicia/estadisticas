@@ -210,4 +210,22 @@ with col[1]:
 with col[1]:
     st.markdown('Mercado Interno')
     st.markdown('Evolucion Mensual')
-    
+    option = {
+        "tooltip": {
+            "trigger": 'axis',
+            "axisPointer": { "type": 'cross' }
+        },
+        "legend": {},    
+        "xAxis": {
+            "type": "category",
+            "data": df2['anio'].to_list(),
+        },
+        "yAxis": {"type": "value"},
+        "series": [{"data": df2['tintos'].to_list(), "type": "line", "name": 'Tintos'},
+                   {"data": df2['blancos'].to_list(), "type": "line", "name": 'Blancos'},
+                   {"data": df2['rosados'].to_list(), "type": "line", "name": 'Rosados'},
+               ]
+        }
+    st_echarts(
+        options=option, height="400px" ,
+    )    
