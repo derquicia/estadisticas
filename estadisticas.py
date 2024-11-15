@@ -116,3 +116,33 @@ with col[1]:
     st_echarts(
         options=options, height="200px",
     )
+
+    st.markdown('Por Envases Vinos Tintos')
+    options = {
+        "title": {"text": "", "left": "center"},
+        "subtitle":{"text": ""},
+        "tooltip": {"trigger": "item"},
+        "legend": {"orient": "vertical", "left": "left",},
+        "series": [
+            {
+                "name": "Hl",
+                "type": "pie",
+                "radius": "50%",
+                "data": [
+                    {"value": 67.437, "name": "Botella"},
+                    {"value": 27.67, "name": "Multilaminados"},
+                    {"value": 4.99, "name": "Otros"},
+                ],
+                "emphasis": {
+                    "itemStyle": {
+                        "shadowBlur": 10,
+                        "shadowOffsetX": 0,
+                        "shadowColor": "rgba(0, 0, 0, 0.5)",
+                    }
+                },
+            }
+        ],
+    }
+    st_echarts(
+        options=options, height="200px",
+    )
