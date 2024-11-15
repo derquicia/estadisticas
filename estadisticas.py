@@ -174,7 +174,6 @@ with col[1]:
                 },
             }
         ],
-        color: colorPalette
     }
     st_echarts(
         options=options, height="200px",
