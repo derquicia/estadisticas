@@ -89,6 +89,7 @@ with col[1]:
     st.markdown('Mercado Interno')
     options = {
         "title": {"text": "Participación y evolución de los despachos por color, en HL", "left": "center"},
+        "subtitle":{"text": ""},
         "tooltip": {"trigger": "item"},
         "legend": {"orient": "vertical", "left": "left",},
         "series": [
