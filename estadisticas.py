@@ -207,7 +207,7 @@ with col[1]:
         options=options, height="200px",
     )
 
-with col[1]:
+with col[2]:
     st.markdown('Mercado Interno')
     st.markdown('Evolucion Mensual')
     option = {
