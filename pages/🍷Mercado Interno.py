@@ -54,7 +54,7 @@ st.markdown(footer, unsafe_allow_html=True)
 
 
 conn = st.connection("postgresql", type="sql")
-df = conn.query('select anio,"Tintos","Blancos","Rosados" from info_desp_anio;', ttl="0"),
+df = conn.query('select anio,tintos,blancos,rosados from info_desp_anio;', ttl="0"),
 #st.write(df)
  
 st.subheader('Evolución de los despachos por año')
@@ -78,9 +78,9 @@ option = {
         "data": df['anio'].to_list(),
     },
     "yAxis": {"type": "value"},
-    "series": [{"data": df1['Tintos'].to_list(), "type": "line", "name": 'Tintos'},
-               {"data": df2['Blancos'].to_list(), "type": "line", "name": 'Blancos'},
-               {"data": df3['Rosados'].to_list(), "type": "line", "name": 'Rosados'},
+    "series": [{"data": df1['tintos'].to_list(), "type": "line", "name": 'Tintos'},
+               {"data": df2['blancos'].to_list(), "type": "line", "name": 'Blancos'},
+               {"data": df3['rosados'].to_list(), "type": "line", "name": 'Rosados'},
                ]
 }
 st_echarts(
