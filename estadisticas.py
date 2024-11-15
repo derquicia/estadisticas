@@ -134,7 +134,7 @@ with col[1]:
         '#7289ab',
         '#91ca8c',
         '#f49f42'
-         ]
+         ],
         "title": {"text": "", "left": "center"},
         "subtitle":{"text": ""},
         "tooltip": {"trigger": "item"},
