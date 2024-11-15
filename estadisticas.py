@@ -206,3 +206,8 @@ with col[1]:
     st_echarts(
         options=options, height="200px",
     )
+
+with col[1]:
+    st.markdown('Mercado Interno')
+    st.markdown('Evolucion Mensual')
+    
