@@ -90,7 +90,7 @@ with col[0]:
     
 with col[1]:
     st.markdown('Mercado Interno')
-    st.markdown('Participación y evolución de los despachos por color, en H')
+    st.markdown('Despachos por color, en H')
     options = {
         "title": {"text": "", "left": "center"},
         "subtitle":{"text": ""},
@@ -120,7 +120,7 @@ with col[1]:
         options=options, height="200px",
     )
 
-    st.markdown('Por Envases Vinos Tintos')
+    st.markdown('Por Envases Tintos')
     options = {
         "color": [
         '#dd6b66',
@@ -162,7 +162,7 @@ with col[1]:
     st_echarts(
         options=options, height="200px",
     )
-    st.markdown('Por Envases Vinos Blancos')
+    st.markdown('Por Envases  Blancos')
     options = {
         "color": [
         '#37A2DA',
