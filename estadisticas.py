@@ -63,12 +63,8 @@ conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
 #st.write(df)
 
-with st.sidebar:
-    st.title('🏂 US Population Dashboard')
-    
-    year_list = list(df.periodo.unique())[::-1]
-    
-    selected_year = st.selectbox('Select a year', year_list)
+col = st.columns((1.5, 4.5, 2), gap='medium')
 
-    color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
-    selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
+with col[0]:
+    st.markdown('Exportaciones')
+     st.metric(label='HL', value= 814101 , delta=-0.97)
