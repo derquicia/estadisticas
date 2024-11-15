@@ -55,9 +55,9 @@ if st.checkbox('Ver datos en forma de tabla'):
     st.write(dfd)
 
 
-dfd['anio'] = dfd['anio'].astype(str)
+#dfd['anio'] = dfd['anio'].astype(str)
 
-newdf=dfd.set_index('anio',inplace=False).rename_axis(None)
+#newdf=dfd.set_index('anio',inplace=False).rename_axis(None)
 
 option = {
     "tooltip": {
