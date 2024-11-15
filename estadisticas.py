@@ -165,7 +165,7 @@ with col[1]:
         '#9d96f5',
         '#8378EA',
         '#96BFFF'
-        ]
+        ],
         "title": {"text": "", "left": "center"},
         "subtitle":{"text": ""},
         "tooltip": {"trigger": "item"},
