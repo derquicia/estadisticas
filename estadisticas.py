@@ -8,6 +8,14 @@ from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar
 from pyecharts import options as opts
 
+st.set_page_config(
+    page_title="Indicadores",
+    page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="expanded")
+
+alt.themes.enable("dark")
+
 hide_streamlit_style = """
                 <style>
                 div[data-testid="stToolbar"] {
