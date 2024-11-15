@@ -210,6 +210,11 @@ with col[1]:
 with col[2]:
     st.markdown('Mercado Interno')
     st.markdown('Evolucion Mensual')
+
+    conn = st.connection("postgresql", type="sql")
+    df1 = conn.query('select anio,tintos,blancos,rosados from info_desp_anio_mes_v1;', ttl="0"),
+    df2 = df1[0]
+    
     option = {
         "tooltip": {
             "trigger": 'axis',
