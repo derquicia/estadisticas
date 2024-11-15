@@ -55,9 +55,9 @@ st.markdown(footer, unsafe_allow_html=True)
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('select anio,litros,color from info_desp_anio;', ttl="0"),
-df1 = conn.query('select anio,litros from info_desp_anio where color = '''Tinto''' ;', ttl="0"),
-df2 = conn.query('select anio,litros from info_desp_anio where color = '''Blanco''' ;', ttl="0"),
-df3 = conn.query('select anio,litros from info_desp_anio where color = '''Rosado''' ;', ttl="0"),
+df1 = conn.query('select anio,litros from info_desp_anio where color = ''Tinto'' ;', ttl="0"),
+df2 = conn.query('select anio,litros from info_desp_anio where color = ''Blanco'' ;', ttl="0"),
+df3 = conn.query('select anio,litros from info_desp_anio where color = ''Rosado'' ;', ttl="0"),
 #st.write(df)
  
 st.subheader('Evolución de los despachos por año')
