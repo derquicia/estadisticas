@@ -47,7 +47,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 conn = st.connection("postgresql", type="sql")
 dfd = conn.query('select anio,tintos,blancos,rosados from info_desp_mat_anio;', ttl="0"),
-st.write(dfd['anio'])
+st.write(dfd[0])
  
 st.subheader('Evolución de los despachos por año')
 
