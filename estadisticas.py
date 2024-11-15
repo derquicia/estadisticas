@@ -10,7 +10,7 @@ from pyecharts import options as opts
 import altair as alt
 
 
-var colorPalette = ['#00b04f', '#ffbf00', 'ff0000']
+colorPalette = ['#00b04f', '#ffbf00', 'ff0000']
 
 st.set_page_config(
     page_title="Indicadores",
