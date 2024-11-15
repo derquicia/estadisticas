@@ -107,7 +107,7 @@ with col[1]:
                     "itemStyle": {
                         "shadowBlur": 10,
                         "shadowOffsetX": 0,
-                        "shadowColor": "rgba(0, 0, 0, 0.5)",
+                        "shadowColor": "rgba(10, 0, 0, 0.5)",
                     }
                 },
             }
