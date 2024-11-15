@@ -151,7 +151,7 @@ with col[1]:
     )
     st.markdown('Por Envases Vinos Blancos')
     options = {
-        color: [
+        "color": [
         '#37A2DA',
         '#32C5E9',
         '#67E0E3',
