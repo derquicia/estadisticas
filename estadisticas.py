@@ -67,4 +67,4 @@ col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:
     st.markdown('Exportaciones')
-     st.metric(label='HL', value= 814101 , delta=-0.97)
+    st.metric(label='HL', value= 814101 , delta=-0.97)
