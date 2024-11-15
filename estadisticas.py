@@ -9,6 +9,9 @@ from pyecharts.charts import Bar
 from pyecharts import options as opts
 import altair as alt
 
+
+var colorPalette = ['#00b04f', '#ffbf00', 'ff0000']
+
 st.set_page_config(
     page_title="Indicadores",
     page_icon="📈",
@@ -171,6 +174,9 @@ with col[1]:
                 },
             }
         ],
+        graph: {
+            color: colorPalette
+        }
     }
     st_echarts(
         options=options, height="200px",
