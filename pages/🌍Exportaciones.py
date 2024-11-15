@@ -156,7 +156,7 @@ seriesList = [
 ]
 
 option = {
-        "animationDuration": 100000,
+        "animationDuration": 1000,
         "dataset": [{"id": "dataset_raw", "source": raw_data}] + datasetWithFilters,
         "title": {"text": "Exportaciones por paises"},
         "tooltip": {"order": "valueDesc", "trigger": "axis"},
