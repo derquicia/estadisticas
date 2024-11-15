@@ -84,3 +84,33 @@ with col[0]:
     st.markdown('Mostos')
     st.metric(label='HL', value= 201909 , delta=102.98)
     st.metric(label='FOB', value= 46389836 , delta=85.97)
+    
+with col[1]:
+    st.markdown('Mercado Interno')
+    options = {
+        "title": {"text": "Participación y evolución de los despachos por color, en HL", "left": "center"},
+        "tooltip": {"trigger": "item"},
+        "legend": {"orient": "vertical", "left": "left",},
+        "series": [
+            {
+                "name": "Hl",
+                "type": "pie",
+                "radius": "50%",
+                "data": [
+                    {"value": 62.17, "name": "Tintos"},
+                    {"value": 30.12, "name": "Blancos"},
+                    {"value": 7.71, "name": "Rosados"},
+                ],
+                "emphasis": {
+                    "itemStyle": {
+                        "shadowBlur": 10,
+                        "shadowOffsetX": 0,
+                        "shadowColor": "rgba(0, 0, 0, 0.5)",
+                    }
+                },
+            }
+        ],
+    }
+    st_echarts(
+        options=options, height="600px",
+    )
