@@ -83,4 +83,4 @@ with col[0]:
     st.metric(label='FOB', value= 272923476 , delta=-1.72)
     st.markdown('Mostos')
     st.metric(label='HL', value= 201909 , delta=102.98)
-    st.metric(label='FOB', value= 46389836 , delta=85,97)
+    st.metric(label='FOB', value= 46389836 , delta=85.97)
