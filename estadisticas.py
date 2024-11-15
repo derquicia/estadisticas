@@ -80,3 +80,7 @@ col = st.columns((1.5, 4.5, 2), gap='medium')
 with col[0]:
     st.markdown('Exportaciones')
     st.metric(label='HL', value= 814101 , delta=-0.97)
+    st.metric(label='FOB', value= 272.923.476 , delta=-1.72)
+    st.markdown('Mostos')
+    st.metric(label='HL', value= 201.909 , delta=102.98)
+    st.metric(label='FOB', value= 46.389.836 , delta=85,97)
