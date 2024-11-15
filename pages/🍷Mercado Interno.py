@@ -52,7 +52,7 @@ st.write(dfd)
 st.subheader('Evolución de los despachos por año')
 
 if st.checkbox('Ver datos en forma de tabla'):
-    st.write(dfd)
+    st.write(dfd['anio'])
 
 
 #dfd['anio'] = dfd['anio'].astype(str)
