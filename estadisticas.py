@@ -112,5 +112,5 @@ with col[1]:
         ],
     }
     st_echarts(
-        options=options, height="600px",
+        options=options, height="200px",
     )
