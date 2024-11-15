@@ -63,7 +63,7 @@ if st.checkbox('Ver datos en forma de tabla'):
     st.write(df)
 
 
-df['anio'] = df['anio'].astype(str)
+#df['anio'] = df['anio'].astype(str)
 
 newdf=df.set_index('anio',inplace=False).rename_axis(None)
 
