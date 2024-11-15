@@ -46,18 +46,18 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 conn = st.connection("postgresql", type="sql")
-df = conn.query('select anio,tintos,blancos,rosados from info_desp_anio_v1;', ttl="0"),
-st.write(df)
+dfd = conn.query('select anio,tintos,blancos,rosados from info_desp_anio_v1;', ttl="0"),
+st.write(dfd)
  
 st.subheader('Evolución de los despachos por año')
 
 if st.checkbox('Ver datos en forma de tabla'):
-    st.write(df)
+    st.write(dfd)
 
 
-df['anio'] = df['anio'].astype(str)
+dfd['anio'] = dfd['anio'].astype(str)
 
-newdf=df.set_index('anio',inplace=False).rename_axis(None)
+newdf=dfd.set_index('anio',inplace=False).rename_axis(None)
 
 option = {
     "tooltip": {
@@ -67,12 +67,12 @@ option = {
     "legend": {},    
     "xAxis": {
         "type": "category",
-        "data": df['anio'].to_list(),
+        "data": dfd['anio'].to_list(),
     },
     "yAxis": {"type": "value"},
-    "series": [{"data": df['tintos'].to_list(), "type": "line", "name": 'Tintos'},
-               {"data": df['blancos'].to_list(), "type": "line", "name": 'Blancos'},
-               {"data": df['rosados'].to_list(), "type": "line", "name": 'Rosados'},
+    "series": [{"data": dfd['tintos'].to_list(), "type": "line", "name": 'Tintos'},
+               {"data": dfd['blancos'].to_list(), "type": "line", "name": 'Blancos'},
+               {"data": dfd['rosados'].to_list(), "type": "line", "name": 'Rosados'},
                ]
 }
 st_echarts(
