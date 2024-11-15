@@ -83,7 +83,7 @@ st_echarts(
 
 conn = st.connection("postgresql", type="sql")
 df1 = conn.query('select anio,tintos,blancos,rosados from info_desp_anio_mes_v1;', ttl="0"),
-st.write(df1[0])
+
 df2 = df1[0]
  
 st.subheader('Evolución de los despachos por Mes')
