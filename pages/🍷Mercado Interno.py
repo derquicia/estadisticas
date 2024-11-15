@@ -81,9 +81,9 @@ option = {
         "data": df['anio'].to_list(),
     },
     "yAxis": {"type": "value"},
-    "series": [{"data": df1['litros'].to_list(), "type": "line", "name": 'Tintos'}
-               {"data": df2['litros'].to_list(), "type": "line", "name": 'Blancos'}
-               {"data": df3['litros'].to_list(), "type": "line", "name": 'Rosados'}
+    "series": [{"data": df1['litros'].to_list(), "type": "line", "name": 'Tintos'},
+               {"data": df2['litros'].to_list(), "type": "line", "name": 'Blancos'},
+               {"data": df3['litros'].to_list(), "type": "line", "name": 'Rosados'},
                ]
 }
 st_echarts(
