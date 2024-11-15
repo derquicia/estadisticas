@@ -88,7 +88,7 @@ df2 = df1[0]
  
 st.subheader('Evolución de los despachos por Mes')
 
-if st.checkbox('Ver datos en forma de tabla'):
+if st.checkbox('Ver datos como tabla'):
     st.write(df)
 
 
