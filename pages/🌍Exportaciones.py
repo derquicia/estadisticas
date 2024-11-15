@@ -44,6 +44,20 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
+footer="""
+
+<style> your css code put here</style>
+
+<div class='footer'>
+
+<p>the word you want to tell<a style='display:block;text-align:center;' 
+
+href='https://www.streamlit.io' target='_blank'>your email address put here</a></p>
+
+</div>"""
+
+st.markdown(footer, unsafe_allow_html=True)
+
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('select anio,litros,fob from inf_expo_anio ;', ttl="0")
@@ -86,7 +100,7 @@ dfpe = conn.query('select distinct pais as country from info_expo_anio_paises ;'
 #st.write(dfp['pais'])
 json_list = json.loads(json.dumps(list(dfp.T.to_dict().values()))) 
 tt = '[["Income","Life Expectancy","Population","Country","Year"],['
-st.write(tt)
+#st.write(tt)
 f = dfp.to_json(orient="values")
 f = f.replace("[[" ,tt)
 #raw_data = json.load(dfp.to_json(orient="values"))
